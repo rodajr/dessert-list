@@ -1,4 +1,6 @@
 # Dessert List - testing/practicing Spring-Boot
+
+Stuff used:
 - java 8;
 - Spring-boot 2;
 - swagger on http://localhost:8081/swagger-ui.html;
