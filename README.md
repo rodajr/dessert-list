@@ -10,8 +10,9 @@ Stuff used:
 
 # TODO List
 - unit test;
-- JWT security for token / bearer authentication
 
-# version 0.1
-- Repository created - 2019-01-02.
+# UPDATE 02/01/2019 / 2019-01-02
+- Repository created - 02/01/2019 / 2019-01-02.
 
+# UPDATE 13/01/2019 / 2019-01-13
+ - JWT(spring-boot-starter-security) security for token (jjwt) / bearer authentication.
