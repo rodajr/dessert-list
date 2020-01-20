@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.dessert.api.entity.Dessert;
@@ -31,6 +32,13 @@ public class DessertController {
 	
 	public DessertController(DessertService service) {
 		this.service = service;
+	}
+	
+	@ApiOperation(value = "Shows Message", notes = "Welcome Message Method")
+	@RequestMapping(method = RequestMethod.GET)
+	@ResponseBody
+	public String hi() {
+		return "hi there!!! \n You will need to log in using the url -> http://localhost:8081/dessert/login";
 	}
 	
 	@ApiOperation(value = "Shows Dessert List", notes = "Dessert List Method")
