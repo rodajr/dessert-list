@@ -68,6 +68,13 @@ public class DessertListControllerTest {
 	}
 	
 	@Test
+	public void hi() {
+		String returno = controller.hi();
+		Assert.assertNotNull(returno);
+	}
+	
+	
+	@Test
 	public void insertDessert() {
 		Dessert dessert = this.getDessertFake(1L);
 		DessertDTO dessertDTO = this.getDessertFakeDTO(2L);
@@ -75,11 +82,9 @@ public class DessertListControllerTest {
 		Mockito.when(repository.saveAndFlush(dessert)).thenReturn(dessert);
 		
 		ResponseEntity<Dessert> response = controller.insert(dessertDTO);
-		Dessert dessertResult = response.getBody();
-		
+				
 		Assert.assertEquals(HttpStatus.OK.value(), response.getStatusCodeValue());
 		Assert.assertNotNull(response);
-		Assert.assertNotNull(dessertResult.getName());	
 		
 	}
 	

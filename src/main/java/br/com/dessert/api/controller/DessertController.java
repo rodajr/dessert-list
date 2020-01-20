@@ -34,6 +34,7 @@ public class DessertController {
 		this.service = service;
 	}
 	
+	//@ApiIgnore
 	@ApiOperation(value = "Shows Message", notes = "Welcome Message Method")
 	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
